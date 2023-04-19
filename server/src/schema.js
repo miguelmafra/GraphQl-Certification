@@ -1,11 +1,8 @@
 const gql = require("graphql-tag");
 
 const typeDefs = gql`
-  # Schema definitions go here
-`;
-module.exports = typeDefs;
 
-type Query {
+  type Query {
   "Get tracks array for homepage grid"
   tracksForHome: [Track!]!
 }
@@ -33,3 +30,7 @@ type Author {
   "Author's profile picture url"
   photo: String
 }
+`;
+module.exports = typeDefs;
+
+
