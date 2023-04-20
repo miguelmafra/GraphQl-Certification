@@ -14,7 +14,11 @@ const Tracks = () => {
 
   if (error) return `Error! ${error.message}`;
 
-  return <Layout grid>{JSON.stringify(data)}</Layout>;
+  return <Layout grid>
+  {data?.tracksForHome?.map((track) => (
+    <TrackCard key={track.id} track={track} />
+  ))}
+</Layout>;
 
   console.log("entrou");
 };
